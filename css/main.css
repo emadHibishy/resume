@@ -1,0 +1,434 @@
+/* globals */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+body{
+    font-family: 'Open Sans',Arial, Helvetica, sans-serif;
+    background-color: #f2f2fc;
+}
+a:hover{
+    text-decoration: none;
+}
+i{
+    margin-right: 10px;
+}
+h1,h2,h3,
+#services .service h4{
+    font-family: 'Dancing Script';
+}
+#services h1,
+#portfolio h1{
+    margin-top: 40px;
+}
+.main{
+    width: 78vw;
+    padding: 30px;
+    float: right;
+    min-height: 100vh;
+}
+.highlight{
+    color: rgb(67 , 61 , 154) !important;
+}
+.heading{
+    animation-delay: 0.2s;
+}
+.content{
+    animation-delay: 1s;
+}
+.list-group-item{
+    border: none;
+    background-color: transparent;
+}
+.main h2{
+    margin: 51px 0 15px;
+}
+p.lead,
+#about .row ul li span{
+    color: #504e70;
+}
+/* end globals */
+
+/* start aside */
+.aside{
+    width: 22vw;
+    height: 100vh;
+    background-color: #040b14;
+    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.aside .container{
+    padding-right: 0;
+}
+.aside a{
+    color: #fff;
+    font-size: 1.1rem;
+}
+.aside ul{
+    margin: 25vh 0 25vh
+}
+.aside ul li{
+    transition: all 0.5s ease-in-out;
+}
+.aside ul li:hover{
+    cursor: pointer;
+}
+.aside ul li:not(.active):hover{
+    padding-left: 40px;
+}
+.aside ul li:not(.active) a:hover{
+    color: #fff ;
+}
+.aside ul li.active{
+    background-color: #f2f2fc;
+    border-radius: 20px 0 0 20px;
+}
+.aside ul li.active a{
+    color: rgb(67 , 61 , 154);
+}
+.aside .copyrights{
+    color: #fff;
+    text-align: center;
+}
+/* end aside */
+/* .main:not(#home){
+    display: none;
+} */
+/* start home */
+#home .social{
+    display: flex;
+}
+#home img{
+    width: 25vw;
+    height: 60vh;
+    border-radius: 50%;
+    margin-bottom: 1.25rem
+}
+#home .social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin: auto 0.6rem;
+    font-size: 2rem ;
+    color: #3835e2;
+    transition: all 0.4s ease-in-out ;
+}
+#home .social a:hover{
+    color: #fff;
+    background-color: #3835e2;
+    box-shadow: 0px 0px 20px #3a37e9;
+}
+#home .social a i{
+    display: contents;
+}
+/* end home */
+
+/* start about */
+#about{
+    padding-top: 1.9rem;
+    padding-bottom: 1.9rem;
+}
+#about p.lead span{
+    color: rgb(232, 56, 16);
+}
+#about .row ul li{
+    margin: 0.6rem;
+    padding-left: 0;
+    border-bottom: 1px solid #e8dfec;
+    font-style: italic;
+}
+/* end about */
+
+/* start skills */
+#skills .education,
+#skills .experience,
+#skills .certifications{
+    padding: 1.25rem;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 8px #999;
+}
+#skills .education h4{
+    margin-top: 1rem;
+    margin-bottom: 1.9rem;
+}
+#skills .skill{
+    background-color: transparent;
+    border: none;
+    padding: 1.25rem;
+}
+#skills .skill h4 span{
+    float: right;
+}
+#skills .skill .progress{
+    height: 0.4rem;
+    background-color: #e3e3e3;
+}
+#skills .skill .progress .progress-bar{
+    background-color: #504e70;
+}
+#skills .experience h4 span{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ec1839;
+}
+#skills .experience > .lead{
+    margin-left: 2.5rem;
+}
+#skills .certifications .card{
+    box-shadow: 3px 3px 8px #999;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+}
+#skills .certifications .card img{
+    height: 50vh;
+}
+#skills .certifications .card .card-body{
+    background-color: rgb(118, 221, 238);
+}
+/* end skills */
+
+/* start services */
+#services{
+    perspective: 1000px;
+}
+#services .service{
+    min-height: 45vh;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #d9d8d8;
+    box-shadow: 3px 3px 7px rgb(161, 161, 161);
+    margin-bottom: 2.5rem;
+    transition: all 0.8s ease-in-out;
+    overflow: hidden;
+}
+#services .service .container{
+    width: 100%;
+    height: 100%;
+}
+#services .service:hover{
+    transform: translateZ(50px);
+}
+#services .service img{
+    display: block;
+    margin: 1.25rem auto;
+    width: 50px;
+    height: 50px;
+}
+/* end services */
+
+/* start portfolio */
+#portfolio ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.9rem auto;
+}
+#portfolio ul li{
+    padding: 0.6rem;
+    font-size: 1.5rem;
+    color: rgba(67 , 61 , 154,0.5);
+    transition: all 0.5s ease-in-out;
+}
+#portfolio ul li:hover,
+#portfolio ul li.active{
+    color: rgb(67 , 61 , 154);
+    cursor: pointer;
+}
+#portfolio .col-11{
+    overflow: hidden;
+}
+.portfolio__projects:not(#all){
+    display: none;
+}
+#portfolio .project{
+    padding: 0;
+    margin: 0.6rem;
+    margin-bottom: 2.5rem;
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1px solid #d9d8d8;
+    box-shadow: 3px 3px 7px rgb(161, 161, 161);
+    height: 80vh;
+    transition: all 1s ease-in;
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+.portfolio__projects#all #store,
+.portfolio__projects#bs-jq #yat-school{
+    margin-top: 6rem;
+}
+#portfolio .project:hover{
+    background-position: bottom;
+}
+#portfolio .project#to-do-app{
+    background-image: url('../img/to-do-app.png');
+}
+#portfolio .project#store{
+    background-image: url('../img/store-project.png');
+}
+#portfolio .project#yat-school{
+    background-image: url('../img/yat-school.png');
+}
+#portfolio .project .overlay{
+    display: none;
+    background-color: #adababb5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 15px;
+}
+#portfolio .project .overlay .container{
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+#portfolio .project h3{
+    margin: 1.25rem auto 3.1rem;
+}
+#portfolio .project p{
+    line-height: 1.7em;
+    color: #4e4949;
+}
+#portfolio .project a{
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* end portfolio */
+
+/* media query */
+/* extra small devices */
+@media (max-width: 575px){
+    .aside .container{
+        padding-left: 0;
+    }
+    .aside ul{
+        margin: 25vh 0;
+    }
+    .aside ul li{
+        text-align: center;
+    }
+    .aside ul li span{
+        display: none;
+    }
+    .aside .copyrights{
+        display: none;
+    }
+    /* home */
+    #home img{
+        width: 45vw;
+        height: 50vh;
+        border-radius: 50%;
+        margin-bottom: 1.25rem
+    }
+    /* portfolio */
+    #portfolio ul li{
+        padding: 5px;
+        font-size: 1.3em;
+    }
+    #portfolio .project{
+        min-height: 530px;
+    }
+    #portfolio .project h3{
+        margin: 0 auto 10px;
+    }
+    #portfolio .project p{
+        line-height: 1em;
+    }
+    #portfolio .project .overlay a{
+        width: 70%;
+    }
+}
+/* small devices */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .aside .container{
+        padding-left: 0;
+    }
+    .aside ul{
+        margin: 15vh 0;
+    }
+    .aside ul li{
+        text-align: center;
+    }
+    .aside ul li span{
+        display: block;
+    }
+    .aside .copyrights{
+        display: none;
+    }
+    /* home */
+    #home img{
+        width: 38vw;
+        height: 50vh;
+        border-radius: 50%;
+        margin-bottom: 1.25rem
+    }
+    /* portfolio */
+    #portfolio .project{
+        min-height: 530px;
+    }
+    #portfolio .project p{
+        line-height: 1em;
+    } 
+}
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #home img{
+        width: 35vw;
+        height: 50vh;
+    }
+    /* skills */
+    #skills .certifications .card{
+        min-height: 670px;
+    }
+    /* services */
+    #services .service{
+        min-height: 50vh;
+    }
+    /* portfolio */
+    #portfolio .project{
+        min-height: 450px;
+    }
+    #portfolio .project h3{
+        margin: 20px auto 30px;
+    }
+    #portfolio .project p{
+        line-height: 1.2em;
+    } 
+}
+
+/* large divices */
+@media (min-width: 992px) and (max-width: 1199px){
+    /* services */
+    #services .service{
+        min-height: 53vh;
+    }
+    /* portfolio */
+    #portfolio .project{
+        min-height: 88vh;
+    }
+    #portfolio .project h3{
+        margin: 1.25rem auto;
+    }
+    #portfolio .project p{
+        line-height: 1.3em;
+    }
+    #portfolio .project .overlay a{
+        width: 80%;
+    }
+}
