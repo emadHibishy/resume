@@ -228,19 +228,19 @@ p.lead,
 /* end services */
 
 /* start portfolio */
-#portfolio ul{
+#portfolio .list-unstyled{
     display: flex;
     justify-content: space-between;
     margin: 1.9rem auto;
 }
-#portfolio ul li{
+#portfolio .list-unstyled li{
     padding: 0.6rem;
     font-size: 1.5rem;
     color: rgba(67 , 61 , 154,0.5);
     transition: all 0.5s ease-in-out;
 }
-#portfolio ul li:hover,
-#portfolio ul li.active{
+#portfolio .list-unstyled li:hover,
+#portfolio .list-unstyled li.active{
     color: rgb(67 , 61 , 154);
     cursor: pointer;
 }
@@ -251,62 +251,84 @@ p.lead,
     display: none;
 }
 #portfolio .project{
-    padding: 0;
+    padding: 50px 10px;
     margin: 0.6rem;
     margin-bottom: 2.5rem;
-    background-color: #fff;
+    background-color: #2b2a2af0;
     border-radius: 16px;
-    border: 1px solid #d9d8d8;
+    border: 1px solid #a5a5a5;
     box-shadow: 3px 3px 7px rgb(161, 161, 161);
-    height: 80vh;
-    transition: all 1s ease-in;
+    position: relative;
+}
+#portfolio .project:nth-child(even){
+    direction: rtl;
+    background-color: #2b2a2af0;
+}
+#portfolio .project .image{
     background-position: top;
     background-size: cover;
-    position: relative;
+    height: 300px;
+    border: 1px solid #bbb;
+    border-radius: 0.3rem;
+    box-shadow: 2px 2px 20px #fff;
+    transition: all 1s ease-in;
 }
 .portfolio__projects#all #store,
 .portfolio__projects#bs-jq #yat-school{
     margin-top: 6rem;
 }
-#portfolio .project:hover{
+#portfolio .project .image:hover{
     background-position: bottom;
 }
-#portfolio .project#to-do-app{
+#portfolio .project .to-do-app{
     background-image: url('../img/to-do-app.png');
 }
-#portfolio .project#store{
+#portfolio .project .store{
     background-image: url('../img/store-project.png');
 }
-#portfolio .project#yat-school{
+#portfolio .project .yat-school{
     background-image: url('../img/yat-school.png');
 }
-#portfolio .project .overlay{
-    display: none;
-    background-color: #adababb5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 15px;
+#portfolio .project .details{
+    color: #fff;
 }
-#portfolio .project .overlay .container{
-    height: 100%;
-    display: grid;
-    align-items: center;
+#portfolio .project .details > div{
+    line-height: 2 !important;
+    margin-bottom: 1rem;
 }
-#portfolio .project h3{
-    margin: 1.25rem auto 3.1rem;
+#portfolio .project .tools,
+#portfolio .project .description,
+#portfolio .project .login{
+    display: flex;
+    align-items: flex-start;
+    direction: initial;
 }
-#portfolio .project p{
-    line-height: 1.7em;
-    color: #4e4949;
+#portfolio .project .details h2,
+#portfolio .project .details .h4{
+    color: #ff0;
 }
-#portfolio .project a{
-    display: block;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+#portfolio .project .details .h4{
+    margin-right: 10px;
+}
+#portfolio .project .details .tags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#portfolio .project .details .tag{
+    padding: 5px;
+    margin-right: 5px;
+    border: 2px solid;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+#portfolio .project .details .btn{
+    width: 90%;
+    letter-spacing: 3px;
+    font-size: 1.3rem;
+    padding: .3rem 0;
+    border-radius: 0px;
 }
 /* end portfolio */
 
