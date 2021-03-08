@@ -22,7 +22,7 @@ h1,h2,h3,
 }
 .main{
     width: 78vw;
-    padding: 30px;
+    padding-left: 20px;
     float: right;
     min-height: 100vh;
 }
@@ -53,11 +53,12 @@ p.lead,
     width: 22vw;
     height: 100vh;
     background-color: #00303f;
-    float: left;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
+    display: flex;
+    align-items: center;
 }
 .aside .container{
     padding-right: 0;
@@ -65,9 +66,6 @@ p.lead,
 .aside a{
     color: #fff;
     font-size: 1.1rem;
-}
-.aside ul{
-    margin: 25vh 0 25vh
 }
 .aside ul li{
     transition: all 0.5s ease-in-out;
@@ -103,7 +101,7 @@ p.lead,
     height: 60vh;
     border-radius: 15px;
     box-shadow: 2px 2px 7px rgb(99, 99, 99);
-    margin-bottom: 1.25rem
+    margin: 2.5rem 0 1.25rem
 }
 #home .social a{
     display: flex;
@@ -230,31 +228,34 @@ p.lead,
 /* start portfolio */
 #portfolio .list-unstyled{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 1.9rem auto;
 }
 #portfolio .list-unstyled li{
     padding: 0.6rem;
     font-size: 1.5rem;
-    color: rgba(67 , 61 , 154,0.5);
+    color: #433d9a;
     transition: all 0.5s ease-in-out;
+    border: 1px solid ;
+    margin-bottom: 10px;
+    border-radius: 0.2rem;
+    cursor: pointer;
 }
 #portfolio .list-unstyled li:hover,
 #portfolio .list-unstyled li.active{
-    color: rgb(67 , 61 , 154);
-    cursor: pointer;
+    border: none;
+    color: #f2f2fc;
+    background-color: #433d9a;
+    border: 1px solid rgba(67 , 61 , 154,0.5);
 }
 #portfolio .col-11{
     overflow: hidden;
-}
-.portfolio__projects:not(#all){
-    display: none;
 }
 #portfolio .project{
     padding: 50px 10px;
     margin: 0.6rem;
     margin-bottom: 2.5rem;
-    background-color: #2b2a2af0;
+    background-color: #191818;
     border-radius: 16px;
     border: 1px solid #a5a5a5;
     box-shadow: 3px 3px 7px rgb(161, 161, 161);
@@ -270,12 +271,8 @@ p.lead,
     height: 300px;
     border: 1px solid #bbb;
     border-radius: 0.3rem;
-    box-shadow: 2px 2px 20px #fff;
+    box-shadow: 2px 2px 20px #848484b5;
     transition: all 1s ease-in;
-}
-.portfolio__projects#all #store,
-.portfolio__projects#bs-jq #yat-school{
-    margin-top: 6rem;
 }
 #portfolio .project .image:hover{
     background-position: bottom;
@@ -329,6 +326,7 @@ p.lead,
     font-size: 1.3rem;
     padding: .3rem 0;
     border-radius: 0px;
+    display: block;
 }
 /* end portfolio */
 
@@ -546,15 +544,23 @@ p.lead,
     #home img{
         width: 45vw;
         height: 50vh;
-        margin-bottom: 1.25rem
+    }
+    /* skills */
+    #skills .experience > .lead {
+        margin-left: 0;
+    }
+    #skills .education,
+    #skills .experience,
+    #skills .certifications {
+        padding: 0.5rem;
+    }
+    #skills .experience > ul{
+        padding: 0;
     }
     /* portfolio */
     #portfolio ul li{
         padding: 5px;
         font-size: 1.3em;
-    }
-    #portfolio .project{
-        min-height: 530px;
     }
     #portfolio .project h3{
         margin: 0 auto 10px;
@@ -562,8 +568,17 @@ p.lead,
     #portfolio .project p{
         line-height: 1em;
     }
-    #portfolio .project .overlay a{
-        width: 70%;
+    #portfolio .project .details{
+        padding: 0;
+    }
+    #portfolio .project .tools,
+    #portfolio .project .description,
+    #portfolio .project .login {
+        display: block;
+        text-align: center;
+    }
+    #portfolio .project .details .btn{
+        text-align: center;
     }
 }
 /* small devices */
@@ -585,9 +600,7 @@ p.lead,
     }
     /* home */
     #home img{
-        width: 38vw;
-        height: 50vh;
-        margin-bottom: 1.25rem
+        width: 40vw;
     }
     /* portfolio */
     #portfolio .project{
@@ -596,13 +609,18 @@ p.lead,
     #portfolio .project p{
         line-height: 1em;
     } 
+    #portfolio .project .tools,
+    #portfolio .project .description,
+    #portfolio .project .login {
+        display: block;
+        text-align: center;
+    }
 }
 
  /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     #home img{
         width: 35vw;
-        height: 50vh;
     }
     /* skills */
     #skills .certifications .card{

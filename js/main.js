@@ -29,14 +29,12 @@ $(function(){
     $('#portfolio ul li').on('click',function(){
         const target = $(this).data('target');
         $(this).addClass('active').siblings().removeClass('active');
-        $('.portfolio__projects').fadeOut();
-        $(target).fadeIn(1000);
-
-    });
-    // showing project details on hover
-    $('#portfolio .project').on({
-        mouseenter: function(){$(this).children('.overlay').show()},
-        mouseleave: function(){$(this).children('.overlay').hide()}
+        if(target === 'all'){
+            $('#portfolio .project').fadeIn(400);
+        }else{
+            $('#portfolio .project').fadeOut(400);
+            $(target).fadeIn(300);
+        }
     });
 
     // add active class to aside element when scroll to its target div
