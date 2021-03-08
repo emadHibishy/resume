@@ -277,8 +277,8 @@ p.lead,
 #portfolio .project .image:hover{
     background-position: bottom;
 }
-#portfolio .project .to-do-app{
-    background-image: url('../img/to-do-app.png');
+#portfolio .project .elite-corp{
+    background-image: url('../img/eliteCorp.png');
 }
 #portfolio .project .store{
     background-image: url('../img/store-project.png');
