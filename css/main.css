@@ -286,6 +286,12 @@ p.lead,
 #portfolio .project .yat-school{
     background-image: url('../img/yat-school.png');
 }
+#portfolio .project .gb{
+    background-image: url('../img/gb.png');
+}
+#portfolio .project .online-shop{
+    background-image: url('../img/online-shop.png');
+}
 #portfolio .project .details{
     color: #fff;
 }
