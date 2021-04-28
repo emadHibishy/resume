@@ -261,10 +261,6 @@ p.lead,
     box-shadow: 3px 3px 7px rgb(161, 161, 161);
     position: relative;
 }
-#portfolio .project:nth-child(even){
-    direction: rtl;
-    background-color: #2b2a2af0;
-}
 #portfolio .project .image{
     background-position: top;
     background-size: cover;
@@ -291,6 +287,9 @@ p.lead,
 }
 #portfolio .project .online-shop{
     background-image: url('../img/online-shop.png');
+}
+#portfolio .project .hotel{
+    background-image: url('../img/hotel.png');
 }
 #portfolio .project .details{
     color: #fff;

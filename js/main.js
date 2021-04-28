@@ -62,5 +62,5 @@ $(function(){
 
 window.addEventListener('load',function(){
     $('body').css("overflow","auto");
-    $('.loading').fadeOut(1000);
+    $('.loading').fadeOut(600);
 });
